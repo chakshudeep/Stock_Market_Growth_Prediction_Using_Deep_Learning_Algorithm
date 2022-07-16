@@ -48,8 +48,8 @@ train_data,test_data=df1[0:training_size,:],df1[training_size:len(df1),:1]
 len(train_data),len(test_data)
 
 #converting array of values into a dataset matrix
- import numpy
- def create_dataset(dataset,time_step=1):
+import numpy
+def create_dataset(dataset,time_step=1):
    dataX, dataY=[], []
    for i in range(len(dataset)-time_step-1):
      a=dataset[i:(i+time_step),0]
